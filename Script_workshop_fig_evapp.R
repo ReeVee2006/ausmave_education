@@ -29,13 +29,13 @@ theme_set(theme_gray(base_size = 14))
 
 #set up files--------------------------------------------
 #setwd 
-setwd("D:/project_functionalevidence/manuscript_workshops/SUPP")
+
 date = strftime(Sys.Date(),"%y%m%d")
 #workshop activity data from 17.11.2023
 workshop23_data=read.csv('20241023_23FEworkshop_results_cleaned.csv',header = TRUE)
 workshop23_data = workshop23_data[which(!is.na(workshop23_data$participantID)),]
 
-workshop_23_barriers=read.table('D:/project_functionalevidence/manuscript_workshops/workshop23/20250212_fe_barrier_analysis_3.txt',sep = "\t", header = TRUE)
+workshop_23_barriers=read.table('20250212_fe_barrier_analysis_3.txt',sep = "\t", header = TRUE)
 
 #######################WORKSHOP 1######################
 ## workshop 1 scully and findlay assay evaluation results
@@ -207,4 +207,5 @@ table(workshop23_data$assay_1_direction_FE_new)
 table(workshop23_data$assay_1_strength_FE_new)
 table(workshop23_data$oddspath_possible)
 table(workshop23_data$assay_2_FE_strength_new)
+
 
